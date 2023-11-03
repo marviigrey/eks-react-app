@@ -20,8 +20,8 @@ Prerequisite:
 1. Knowledge on Kubernetes 
 2. Amazon EKS.
 3. Cloud9 or IDE such as VsCode.
-
- The first Step is to setup our cluster. This is where our applications will be deployed.
+ 
+The first Step is to setup our cluster. This is where our applications will be deployed.
    - Open your AWS console tab and navigate to the EKS dashboard.
    - Select add cluster and create a cluster with any name of your choice.
    - Choose the latest version of kubernetes.
@@ -70,6 +70,7 @@ Prerequisite:
    - create a ns called voting-app using:
      
                          kubectl create ns cloudchamp
+          kubectl config set-context --current --namespace cloudchamp
    
    After creating ns,create a directory called manifests where all your files will be 
    stored. all manifests are in this repo in the manifests directory.
@@ -82,6 +83,7 @@ Resources that will be created:
 5. A cluster svc for our mongodb Database,as we only want our api to make calls within our cluster.
 
 cd into the manifests directory and run:
+
           kubectl create -f .
           
 After creating it, we will have to get into any of our Mongodb pods to create a database and 
