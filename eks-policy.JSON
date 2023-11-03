@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "eks:DescribeCluster",
+                "eks:ListClusters",
+                "eks:DescribeNodeGroup",
+                "eks:ListNodeGroups",
+                "eks:ListUpdates",
+                "eks:AccessKubernetesApi"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
